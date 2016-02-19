@@ -3,7 +3,47 @@
 Components
 ======================================
 */
+.canvas-wrap {
+  background: rgba(255,255,255,1);
+  overflow: hidden;
+  width: 100%;
+}
+.row.row-wide {
+  width: 100%;
+  max-width: 1680px;
+}
+.columns {
+  overflow: hidden;
+}
+.header-main {
+  height: 40vh;
+  padding: 100px 0 0;
 
+  @include laptop {
+    height: 35vh;
+    padding-top: 50px;
+  }
+}
+.intro-wrap {
+  height: 100vh;
+
+  @include laptop {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+.intro-main {
+  height: 60vh;
+
+  @include laptop {
+    height: 65vh;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+}
 
 .brand-logo {
   background: url("../img/lw-interactive.png") no-repeat;
@@ -19,7 +59,7 @@ Components
   border-bottom: 1px solid rgba(255, 255, 255, 1);
 }
 .projects-last {
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 .project-bg {
   //border-top: 1px solid rgba(255, 255, 255, 1);

@@ -266,8 +266,7 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"],
-input[type="reset"],
+html input[type="button"], input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -1424,7 +1423,7 @@ Grid
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
-  unicode-range: U+0020-25CA;
+  unicode-range: U20-25CA;
 }
 
 @font-face {
@@ -1475,38 +1474,6 @@ Grid
   font-style: normal;
 }
 
-body {
-  color: rgba(0, 0, 0, 0.5);
-  font-family: "merriweatherregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  overflow-x: hidden;
-  background: black;
-  background-image: url("../img/body-bg.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  padding: 0 6px;
-}
-
-body:before, body:after {
-  background: black;
-  content: '';
-  display: block;
-  height: 6px;
-  left: 0;
-  position: fixed;
-  width: 100%;
-  z-index: 99999;
-}
-
-body:before {
-  top: 0;
-}
-
-body:after {
-  bottom: 0;
-  z-index: 99999;
-}
-
 h1, h2, h3, h4, h5 {
   color: #b69853;
   font-family: "montserratlight", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1549,6 +1516,38 @@ Helper Classes
 Block Level
 ======================================
 */
+body {
+  color: rgba(0, 0, 0, 0.5);
+  font-family: "merriweatherregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  background: black;
+  background-image: url("../img/body-bg.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 0 8px;
+}
+
+body:before, body:after {
+  background: black;
+  content: '';
+  display: block;
+  height: 8px;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+}
+
+body:before {
+  top: 0;
+}
+
+body:after {
+  bottom: 0;
+  z-index: 99999;
+}
+
 .canvas-wrap {
   background: white;
   overflow: hidden;
@@ -1607,6 +1606,59 @@ Block Level
 Components
 ======================================
 */
+.canvas-wrap {
+  background: white;
+  overflow: hidden;
+  width: 100%;
+}
+
+.row.row-wide {
+  width: 100%;
+  max-width: 1680px;
+}
+
+.columns {
+  overflow: hidden;
+}
+
+.header-main {
+  height: 40vh;
+  padding: 100px 0 0;
+}
+
+@media (max-width: 1367px) {
+  .header-main {
+    height: 35vh;
+    padding-top: 50px;
+  }
+}
+
+.intro-wrap {
+  height: 100vh;
+}
+
+@media (max-width: 1367px) {
+  .intro-wrap {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+.intro-main {
+  height: 60vh;
+}
+
+@media (max-width: 1367px) {
+  .intro-main {
+    height: 65vh;
+  }
+}
+
+.intro-main p {
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
 .brand-logo {
   background: url("../img/lw-interactive.png") no-repeat;
   display: inline-block;
@@ -1623,7 +1675,7 @@ Components
 }
 
 .projects-last {
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .project-bg {
@@ -1674,9 +1726,9 @@ button {
   outline: none;
   padding: 10px 20px;
   text-transform: uppercase;
-  transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -webkit-transition: all .5s ease;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
 }
 
 button:active {

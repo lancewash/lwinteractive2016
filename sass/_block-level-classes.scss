@@ -3,7 +3,36 @@
 Block Level
 ======================================
 */
+body {
+  //background: lighten($colorBody, 90%);
+  color: $color-primary;
+  font-family: $font-family-base;
+  overflow-x: hidden;
+  background: rgba(0,0,0,1);
+  background-image: url("../img/body-bg.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 0 8px;
 
+  &:before, &:after {
+    background: rgba(0,0,0,1);
+    content: '';
+    display: block;
+    height: 8px;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+  }
+  &:before {
+    top: 0;
+  }
+  &:after {
+    bottom: 0;
+    z-index: 99999;
+  }
+}
 .canvas-wrap {
   background: rgba(255,255,255,1);
   overflow: hidden;
