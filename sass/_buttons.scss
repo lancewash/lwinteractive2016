@@ -6,7 +6,22 @@ Helper Classes
 
 button {
   background: rgba(255,255,255,1);
-  border: 1px solid rgba(0,0,0,.1);
+  border: 1px solid rgba(255,255,255,0);
+  color: rgba(0,0,0,1);
+  font-family: $font-family-headings-bold;
+  font-size: .75rem;
+  letter-spacing: .1rem;
+  outline: none;
   padding: 10px 20px;
   text-transform: uppercase;
+
+  @include allTransition;
+
+  &:active {
+    background: rgba(0,0,0,.01);
+    border: 1px solid rgba(0,0,0,.05);
+  }
+  &:hover {
+    color: rgba(0,0,0,.25);
+  }
 }

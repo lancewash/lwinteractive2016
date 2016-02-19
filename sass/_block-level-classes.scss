@@ -19,10 +19,29 @@ Block Level
 .header-main {
   height: 40vh;
   padding: 100px 0 0;
+
+  @include laptop {
+    height: 35vh;
+    padding-top: 50px;
+  }
 }
 .intro-wrap {
   height: 100vh;
+
+  @include laptop {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
 }
 .intro-main {
   height: 60vh;
+
+  @include laptop {
+    height: 65vh;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
 }
