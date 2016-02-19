@@ -20,6 +20,14 @@ body {
   margin: 0;
 }
 
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 /* HTML5 display definitions
    ========================================================================== */
 /**
@@ -258,8 +266,7 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"],
-input[type="reset"],
+html input[type="button"], input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -1465,6 +1472,10 @@ Helper Classes
   margin-right: 1.85rem;
 }
 
+.flex {
+  display: flex;
+}
+
 /*
 ======================================
 Block Level
@@ -1476,9 +1487,18 @@ Block Level
   width: 100%;
 }
 
+.row.row-wide {
+  width: 100%;
+  max-width: 1680px;
+}
+
+.columns {
+  overflow: hidden;
+}
+
 .header-main {
-  height: 30vh;
-  padding: 50px 0 0;
+  height: 40vh;
+  padding: 100px 0 0;
 }
 
 .intro-wrap {
@@ -1486,7 +1506,7 @@ Block Level
 }
 
 .intro-main {
-  height: 70vh;
+  height: 60vh;
 }
 
 /*
@@ -1502,6 +1522,51 @@ Components
   white-space: nowrap;
   overflow: hidden;
   width: 266px;
+}
+
+.gs-bg {
+  background: url("../img/gifted-scholars-lg.jpg") no-repeat;
+  height: 660px;
+}
+
+.gs- {
+  background: #000;
+}
+
+.fabc-bg {
+  background: url("../img/fabc-lg.jpg") no-repeat;
+  height: 660px;
+}
+
+.fabc- {
+  background: #000;
+}
+
+.sii-bg {
+  background: url("../img/sii-lg.jpg") no-repeat;
+  height: 660px;
+}
+
+.sii- {
+  background: #000;
+}
+
+.pt-bg {
+  background: url("../img/pt-lg.jpg") no-repeat;
+  height: 660px;
+}
+
+.pt- {
+  background: #000;
+}
+
+.mc-bg {
+  background: url("../img/mc-lg.png") no-repeat;
+  height: 660px;
+}
+
+.mc- {
+  background: #404040;
 }
 
 /*

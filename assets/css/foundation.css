@@ -33,6 +33,7 @@ body {
    * and Firefox.
    * Correct `block` display not defined for `main` in IE 11.
    */
+
 article,
 aside,
 details,
@@ -367,10 +368,6 @@ html {
   font-size: 100%;
   box-sizing: border-box; }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit; }
 
 body {
   padding: 0;
