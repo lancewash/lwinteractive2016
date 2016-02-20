@@ -266,7 +266,8 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"], input[type="reset"],
+html input[type="button"],
+input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -1423,7 +1424,7 @@ Grid
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
-  unicode-range: U20-25CA;
+  unicode-range: U+0020-25CA;
 }
 
 @font-face {
@@ -1637,6 +1638,14 @@ Components
   height: 100vh;
 }
 
+.project-page .intro-wrap {
+  height: 70vh;
+}
+
+.project-page .intro-wrap h1 {
+  color: black;
+}
+
 @media (max-width: 1367px) {
   .intro-wrap {
     padding-left: 4rem;
@@ -1674,13 +1683,13 @@ Components
   border-bottom: 1px solid white;
 }
 
-.projects-last {
-  margin-bottom: 6px;
-}
-
 .project-bg {
   border-left: 1px solid white;
-  height: 400px;
+  min-height: 400px;
+}
+
+.project-bg.project-highlight {
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .gs-bg {
@@ -1711,6 +1720,12 @@ Components
   background: url("../img/lw-lg.png") center center no-repeat;
 }
 
+footer {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  margin-bottom: 7px;
+}
+
 /*
 ======================================
 Helper Classes
@@ -1726,9 +1741,9 @@ button {
   outline: none;
   padding: 10px 20px;
   text-transform: uppercase;
-  transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
+  transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -webkit-transition: all .5s ease;
 }
 
 button:active {

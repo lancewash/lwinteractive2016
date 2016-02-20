@@ -32,11 +32,30 @@ body {
     bottom: 0;
     z-index: 99999;
   }
+
+  //&#fabc {
+  //  background: #3c0308;
+  //
+  //  &:before, &:after {
+  //    background: #3c0308;
+  //  }
+  //}
+  //&#sii {
+  //  background: #2FADD5;
+  //
+  //  &:before, &:after {
+  //    background: #2FADD5;
+  //  }
+  //}
 }
 .canvas-wrap {
   background: rgba(255,255,255,1);
   overflow: hidden;
   width: 100%;
+  
+  //#sii & {
+  //  background: #2FADD5;
+  //}
 }
 .row.row-wide {
   width: 100%;

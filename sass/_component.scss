@@ -27,6 +27,14 @@ Components
 .intro-wrap {
   height: 100vh;
 
+  .project-page & {
+    height: 70vh;
+    
+    h1 {
+      color: rgba(0,0,0,1);
+    }
+  }
+
   @include laptop {
     padding-left: 4rem;
     padding-right: 4rem;
@@ -59,12 +67,16 @@ Components
   border-bottom: 1px solid rgba(255, 255, 255, 1);
 }
 .projects-last {
-  margin-bottom: 6px;
+  //margin-bottom: 1px;
 }
 .project-bg {
   //border-top: 1px solid rgba(255, 255, 255, 1);
   border-left: 1px solid rgba(255, 255, 255, 1);
-  height: 400px;
+  min-height: 400px;
+  
+  &.project-highlight {
+    background: rgba(0,0,0,.1);
+  }
 }
 .gs-bg {
   background: url("../img/gifted-scholars-lg.jpg") center center no-repeat;
@@ -92,4 +104,9 @@ Components
 
 .lw-bg {
   background: url("../img/lw-lg.png") center center no-repeat;
+}
+footer {
+  border-left: 1px solid rgba(255,255,255,1);
+  border-right: 1px solid rgba(255,255,255,1);
+  margin-bottom: 7px;
 }
