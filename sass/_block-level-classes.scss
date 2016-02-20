@@ -13,13 +13,13 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  padding: 0 8px;
+  padding: 0 6px;
 
   &:before, &:after {
     background: rgba(0,0,0,1);
     content: '';
     display: block;
-    height: 8px;
+    height: 6px;
     left: 0;
     position: fixed;
     width: 100%;

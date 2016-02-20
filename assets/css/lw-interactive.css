@@ -1525,14 +1525,14 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  padding: 0 8px;
+  padding: 0 6px;
 }
 
 body:before, body:after {
   background: black;
   content: '';
   display: block;
-  height: 8px;
+  height: 6px;
   left: 0;
   position: fixed;
   width: 100%;
@@ -1675,7 +1675,7 @@ Components
 }
 
 .projects-last {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .project-bg {
