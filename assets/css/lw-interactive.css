@@ -1719,7 +1719,7 @@ Helper Classes
 button {
   background: white;
   border: 1px solid rgba(255, 255, 255, 0);
-  color: black;
+  color: #b69853;
   font-family: "montserratbold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: .75rem;
   letter-spacing: .1rem;
@@ -1737,5 +1737,5 @@ button:active {
 }
 
 button:hover {
-  color: rgba(0, 0, 0, 0.25);
+  color: black;
 }
