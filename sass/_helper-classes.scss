@@ -8,4 +8,8 @@ Helper Classes
 }
 .flex {
   display: flex;
+  
+  @include tablet-s {
+    display: block;
+  }
 }

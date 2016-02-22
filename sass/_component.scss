@@ -30,6 +30,9 @@ main {
     height: 35vh;
     padding-top: 50px;
   }
+  @include tablet-s {
+    height: 20vh;
+  }
 }
 .intro-wrap {
   height: 100vh;
@@ -53,7 +56,12 @@ main {
     padding-left: 4rem;
     padding-right: 4rem;
   }
+  @include tablet {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
+
 .intro-main {
   height: 60vh;
   
@@ -70,9 +78,46 @@ main {
     height: 65vh;
   }
 
+  h1 {
+    position: relative;
+
+    @include tablet {
+      font-size: 1.75rem;
+
+      &::after {
+       display: none;
+      }
+    }
+    @include tablet-s {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    &::after {
+      background: rgba(0,0,0,.1);
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 1px;
+      margin: 20px auto 0 0;
+      left: 0;
+      top: 110px;
+
+    }
+  }
+
   p {
     font-size: 1.2rem;
     line-height: 2rem;
+
+    @include tablet {
+      font-size: 1rem;
+    }
+    @include tablet-s {
+      font-size: .9rem;
+      line-height: 1.5rem;
+      text-align: center;
+    }
   }
 }
 
@@ -87,6 +132,11 @@ main {
 }
 .projects-wrap {
   border-top: 1px solid rgba(255,255,255,1);
+
+  .overlay & {
+    margin-top: 7px;
+    height: calc(100vh - 10px);
+  }
 
   &:hover img {
     -webkit-filter: sepia(75%);
@@ -123,8 +173,9 @@ main {
 .project-bg {
   //border-top: 1px solid rgba(255, 255, 255, 1);
   border-left: 1px solid rgba(255, 255, 255, 1);
-  min-height: 400px;
-  max-height: 400px;
+  //min-height: 400px;
+  //max-height: 400px;
+  height: 33vh;
   
   &.project-highlight {
     background: #efefef;
@@ -147,6 +198,12 @@ main {
   &.columns {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+.columns {
+
+  &.large-8 {
+
   }
 }
 .gs-bg {
