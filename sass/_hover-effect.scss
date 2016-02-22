@@ -27,12 +27,24 @@ figure.effect-duke img,
 figure.effect-duke p {
   -webkit-transition: opacity .75s, -webkit-transform .75s;
   transition: opacity .75s, transform .75s;
+
+  @include allTransition;
+
 }
 
 figure.effect-duke:hover img {
   opacity: 1;
   -webkit-transform: scale3d(1.2,1.2,1);
   transform: scale3d(1.2,1.2,1);
+  -webkit-filter: none;
+  -moz-filter: none;
+  -o-filter: none;
+  -ms-filter: none;
+  filter: none;
+
+
+  // Browser Specific
+
 }
 
 figure.effect-duke h2 {

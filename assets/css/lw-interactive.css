@@ -266,8 +266,7 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"],
-input[type="reset"],
+html input[type="button"], input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -1424,7 +1423,7 @@ Grid
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
-  unicode-range: U+0020-25CA;
+  unicode-range: U20-25CA;
 }
 
 @font-face {
@@ -1505,7 +1504,6 @@ Helper Classes
 */
 .right {
   float: right;
-  margin-right: 1.85rem;
 }
 
 .flex {
@@ -1602,6 +1600,10 @@ body:after {
   line-height: 2rem;
 }
 
+.nav-wrapper {
+  padding-top: 100px;
+}
+
 /*
 ======================================
 Components
@@ -1624,7 +1626,11 @@ Components
 
 .header-main {
   height: 40vh;
-  padding: 100px 0 0;
+  padding: 0;
+}
+
+.project-page .header-main {
+  height: 30vh;
 }
 
 @media (max-width: 1367px) {
@@ -1639,11 +1645,19 @@ Components
 }
 
 .project-page .intro-wrap {
-  height: 70vh;
+  height: 40vh;
 }
 
 .project-page .intro-wrap h1 {
   color: black;
+  margin: 0;
+  text-align: center;
+}
+
+.project-page .intro-wrap p {
+  color: rgba(0, 0, 0, 0.5);
+  margin: 1.5em 0 3em;
+  text-align: center;
 }
 
 @media (max-width: 1367px) {
@@ -1655,6 +1669,14 @@ Components
 
 .intro-main {
   height: 60vh;
+}
+
+.project-page .intro-main {
+  height: auto;
+  padding-bottom: 1.5em;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
 }
 
 @media (max-width: 1367px) {
@@ -1669,13 +1691,21 @@ Components
 }
 
 .brand-logo {
-  background: url("../img/lw-interactive.png") no-repeat;
+  background: url("../img/lw-interactive-logo.png") no-repeat;
   display: inline-block;
-  height: 33px;
+  height: 80px;
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
-  width: 266px;
+  width: 100px;
+}
+
+.projects-wrap:hover img {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 .projects {
@@ -1690,7 +1720,16 @@ Components
 }
 
 .project-bg.project-highlight {
-  background: rgba(0, 0, 0, 0.1);
+  background: #efefef;
+}
+
+.project-bg.project-highlight img {
+  display: block;
+  margin: 50px auto 0;
+  max-width: 100%;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
 }
 
 .project-bg.columns {
@@ -1747,9 +1786,9 @@ button {
   outline: none;
   padding: 10px 20px;
   text-transform: uppercase;
-  transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -webkit-transition: all .5s ease;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
 }
 
 button:active {
@@ -1771,14 +1810,22 @@ figure.effect-duke {
 
 figure.effect-duke img,
 figure.effect-duke p {
-  -webkit-transition: opacity .75s, -webkit-transform .75s;
-  transition: opacity .75s, transform .75s;
+  -webkit-transition: opacity 0.75s, -webkit-transform 0.75s;
+  transition: opacity 0.75s, transform 0.75s;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
 }
 
 figure.effect-duke:hover img {
   opacity: 1;
   -webkit-transform: scale3d(1.2, 1.2, 1);
   transform: scale3d(1.2, 1.2, 1);
+  -webkit-filter: none;
+  -moz-filter: none;
+  -o-filter: none;
+  -ms-filter: none;
+  filter: none;
 }
 
 figure.effect-duke h2 {
@@ -1831,9 +1878,9 @@ figure.effect-duke p {
 }
 
 figure.effect-duke:hover p {
-  transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -webkit-transition: all .5s ease;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
 }
 
 figure.effect-duke:hover p:hover {

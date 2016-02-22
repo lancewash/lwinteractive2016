@@ -17,7 +17,11 @@ Components
 }
 .header-main {
   height: 40vh;
-  padding: 100px 0 0;
+  padding: 0;
+  
+  .project-page & {
+    height: 30vh;
+  }
 
   @include laptop {
     height: 35vh;
@@ -28,10 +32,17 @@ Components
   height: 100vh;
 
   .project-page & {
-    height: 70vh;
+    height: 40vh;
     
     h1 {
       color: rgba(0,0,0,1);
+      margin: 0;
+      text-align: center;
+    }
+    p {
+      color: rgba(0, 0, 0, .5);
+      margin: 1.5em 0 3em;
+      text-align: center;
     }
   }
 
@@ -42,6 +53,15 @@ Components
 }
 .intro-main {
   height: 60vh;
+  
+  .project-page & {
+    //border-bottom: 1px solid rgba(0,0,0,.25);
+    height: auto;
+    padding-bottom: 1.5em;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
 
   @include laptop {
     height: 65vh;
@@ -54,13 +74,27 @@ Components
 }
 
 .brand-logo {
-  background: url("../img/lw-interactive.png") no-repeat;
+  background: url("../img/lw-interactive-logo.png") no-repeat;
   display: inline-block;
-  height: 33px;
+  height: 80px;
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
-  width: 266px;
+  width: 100px;
+}
+.projects-wrap {
+
+  &:hover img {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%);
+
+    &:hover {
+
+    }
+  }
 }
 .projects {
   border-right: 1px solid rgba(255, 255, 255, 1);
@@ -76,7 +110,21 @@ Components
   max-height: 400px;
   
   &.project-highlight {
-    background: rgba(0,0,0,.1);
+    background: #efefef;
+
+
+    
+    img {
+      display: block;
+      margin: 50px auto 0;
+      max-width: 100%;
+
+      @include allTransition;
+
+      &:hover {
+        //box-shadow: 0 2px 15px 0 rgba(0,0,0,0.25),0 2px 20px 0 rgba(0,0,0,0.25);
+      }
+    }
   }
 
   &.columns {
