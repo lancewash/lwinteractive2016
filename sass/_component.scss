@@ -3,6 +3,9 @@
 Components
 ======================================
 */
+main {
+  border-top: 6px solid rgba(0, 0, 0, 1);
+}
 .canvas-wrap {
   background: rgba(255,255,255,1);
   overflow: hidden;
@@ -76,20 +79,34 @@ Components
 .brand-logo {
   background: url("../img/lw-interactive-logo.png") no-repeat;
   display: inline-block;
-  height: 80px;
+  height: 33px;
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
-  width: 100px;
+  width: 74px;
 }
 .projects-wrap {
+  border-top: 1px solid rgba(255,255,255,1);
 
   &:hover img {
+    -webkit-filter: sepia(75%);
+    -moz-filter: sepia(75%);
+    -o-filter: sepia(75%);
+    -ms-filter: sepia(75%);
+    filter: sepia(100%);
+
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
     -o-filter: grayscale(100%);
     -ms-filter: grayscale(100%);
     filter: grayscale(100%);
+
+    // Browser Specific
+    //-webkit-filter: blur(8px);
+    //-moz-filter: blur(8px);
+    //-o-filter: blur(8px);
+    //-ms-filter: blur(8px);
+    //filter: blur(8px);
 
     &:hover {
 
@@ -159,6 +176,7 @@ Components
 .lw-bg {
   background: url("../img/lw-lg.png") center center no-repeat;
 }
+
 footer {
   border-left: 1px solid rgba(255,255,255,1);
   border-right: 1px solid rgba(255,255,255,1);

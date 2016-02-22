@@ -1589,6 +1589,21 @@ body:after {
   height: 60vh;
 }
 
+.intro-main h1 {
+  position: relative;
+}
+
+.intro-main h1::after {
+  background: rgba(0, 0, 0, 0.1);
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 1px;
+  margin: 20px auto 0 0;
+  left: 0;
+  top: 110px;
+}
+
 @media (max-width: 1367px) {
   .intro-main {
     height: 65vh;
@@ -1609,6 +1624,10 @@ body:after {
 Components
 ======================================
 */
+main {
+  border-top: 6px solid black;
+}
+
 .canvas-wrap {
   background: white;
   overflow: hidden;
@@ -1693,14 +1712,23 @@ Components
 .brand-logo {
   background: url("../img/lw-interactive-logo.png") no-repeat;
   display: inline-block;
-  height: 80px;
+  height: 33px;
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
-  width: 100px;
+  width: 74px;
+}
+
+.projects-wrap {
+  border-top: 1px solid white;
 }
 
 .projects-wrap:hover img {
+  -webkit-filter: sepia(75%);
+  -moz-filter: sepia(75%);
+  -o-filter: sepia(75%);
+  -ms-filter: sepia(75%);
+  filter: sepia(100%);
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
   -o-filter: grayscale(100%);
@@ -1829,8 +1857,14 @@ figure.effect-duke:hover img {
 }
 
 figure.effect-duke h2 {
-  top: 80px;
+  letter-spacing: 4px;
+  line-height: 1.25;
+  top: 120px;
   color: white;
+  padding: 10px;
+  position: relative;
+  max-width: 620px;
+  margin: 0 auto;
   position: relative;
   -webkit-transition: -webkit-transform 0.75s;
   transition: transform 0.75s;
@@ -1839,6 +1873,32 @@ figure.effect-duke h2 {
   -webkit-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
   text-align: center;
+}
+
+.inverse-bg figure.effect-duke h2 {
+  background: rgba(255, 255, 255, 0.75);
+  color: rgba(0, 0, 0, 0.75);
+  min-width: auto;
+}
+
+figure.effect-duke h2 span {
+  font-family: "merriweatherregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 100;
+  letter-spacing: 2px;
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+figure.effect-duke h2::after {
+  background: rgba(255, 255, 255, 0.5);
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 1px;
+  margin: 60px auto 0;
+  left: 0;
+  right: 0;
 }
 
 .flex figure figcaption > a {
@@ -1855,26 +1915,45 @@ figure.effect-duke h2 {
   left: 0;
   width: 100%;
   height: 100%;
+  cursor: default;
 }
 
 figure.effect-duke p {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  color: white;
-  font-family: "montserratlight", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  text-align: center;
   margin: 0 auto;
   font-size: 90%;
   opacity: 0;
-  padding: 12px 0;
   position: relative;
-  top: 100px;
+  top: 180px;
   width: 260px;
   -webkit-transition: opacity 0.75s, -webkit-transform 0.75s;
   transition: opacity 0.75s, transform 0.75s;
   -webkit-transform: translate3d(0, -50px, 0);
   transform: translate3d(0, -50px, 0);
   z-index: 99999;
+}
+
+figure.effect-duke p a {
+  background: rgba(255, 255, 255, 0.75);
+  display: block;
+  border: 1px solid white;
+  color: black;
+  font-family: "montserratlight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 12px 0;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+}
+
+figure.effect-duke p a:hover {
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5), 0 5px 10px 0 rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5), 0 5px 10px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 5px 10px 0 rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.75);
 }
 
 figure.effect-duke:hover p {
