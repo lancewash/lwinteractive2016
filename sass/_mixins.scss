@@ -2,6 +2,7 @@
 $laptop-width: 1367px;
 $tablet-850-width: 850px;
 $tablet-680-width: 680px;
+$tablet-525-width: 525px;
 
 @mixin laptop {
   @media (max-width: #{$laptop-width}) {
@@ -18,6 +19,11 @@ $tablet-680-width: 680px;
     @content;
   }
 }
+//@mixin tablet-s {
+//  @media (max-width: #{$tablet-680-width} and min-width: #($tablet-525-width)) {
+//    @content;
+//  }
+//}
 
 $laptop: "(max-width: 1367px)";
 @media screen and (max-width: 1367px) {$base_width: 1367px;}

@@ -206,3 +206,10 @@ html, body {
     min-height: 34px;
   }
 }
+
+#trigger-overlay {
+
+  @include tablet-s {
+    display: none;;
+  }
+}

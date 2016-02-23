@@ -1766,6 +1766,14 @@ main {
   width: 74px;
 }
 
+@media (max-width: 680px) {
+  .brand-logo {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
 .projects-wrap {
   border-top: 1px solid white;
 }
@@ -1796,6 +1804,13 @@ main {
 .project-bg {
   border-left: 1px solid white;
   height: 33vh;
+}
+
+@media (max-width: 680px) {
+  .project-bg {
+    height: 215px;
+    position: relative;
+  }
 }
 
 .project-bg.project-highlight {
@@ -1894,6 +1909,10 @@ figure.effect-duke p {
   transition: all .5s ease;
   -moz-transition: all .5s ease;
   -webkit-transition: all .5s ease;
+}
+
+figure.effect-duke img {
+  max-width: 100%;
 }
 
 figure.effect-duke:hover img {
@@ -2007,6 +2026,13 @@ figure.effect-duke p a:hover {
   color: rgba(0, 0, 0, 0.75);
 }
 
+@media (max-width: 680px) {
+  figure.effect-duke p a {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+}
+
 figure.effect-duke:hover p {
   transition: all .5s ease;
   -moz-transition: all .5s ease;
@@ -2058,6 +2084,14 @@ figure.effect-duke:hover p {
     width: 220px;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (max-width: 680px) and (max-width: 680px) {
+  figure.effect-duke p {
+    position: absolute;
+    top: 154px;
+    width: 100%;
   }
 }
 
@@ -2263,5 +2297,11 @@ html, body {
   }
   .overlay ul li {
     min-height: 34px;
+  }
+}
+
+@media (max-width: 680px) {
+  #trigger-overlay {
+    display: none;
   }
 }

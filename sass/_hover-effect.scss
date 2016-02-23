@@ -32,6 +32,9 @@ figure.effect-duke p {
 
 }
 
+figure.effect-duke img {
+  max-width: 100%;
+}
 figure.effect-duke:hover img {
   opacity: 1;
   -webkit-transform: scale3d(1.2,1.2,1);
@@ -153,8 +156,6 @@ figure.effect-duke p {
     text-transform: uppercase;
     text-align: center;
     padding: 12px 0;
-
-
     @include allTransition;
     
     &:hover {
@@ -163,6 +164,11 @@ figure.effect-duke p {
       -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,.5),0 5px 10px 0 rgba(0,0,0,.4);
       box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 5px 10px 0 rgba(0,0,0,.4);
       color: rgba(0, 0, 0, .75);
+    }
+
+    @include tablet-s {
+      border-top: 1px solid rgba(0,0,0,1);
+      border-bottom: 1px solid rgba(0,0,0,1);
     }
   }
 }
@@ -255,5 +261,11 @@ figure.effect-duke:hover p {
     width: 220px;
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
+
+    @include tablet-s {
+      position: absolute;
+      top: 154px;
+      width: 100%;
+    }
   }
 }
