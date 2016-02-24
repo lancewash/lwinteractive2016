@@ -35,7 +35,9 @@ main {
   }
 }
 .intro-wrap {
-  height: 100vh;
+  //height: calc(100vh - 70px);
+  //height: 100vh;
+  //position: fixed;
 
   .project-page & {
     height: 40vh;
@@ -51,75 +53,9 @@ main {
       text-align: center;
     }
   }
-
-  @include laptop {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-  @include tablet {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
 }
 
-.intro-main {
-  height: 60vh;
-  
-  .project-page & {
-    //border-bottom: 1px solid rgba(0,0,0,.25);
-    height: auto;
-    padding-bottom: 1.5em;
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-  }
 
-  @include laptop {
-    height: 65vh;
-  }
-
-  h1 {
-    position: relative;
-
-    @include tablet {
-      font-size: 1.75rem;
-
-      &::after {
-       display: none;
-      }
-    }
-    @include tablet-s {
-      font-size: 1.5rem;
-      text-align: center;
-    }
-
-    &::after {
-      background: rgba(0,0,0,.1);
-      content: "";
-      position: absolute;
-      width: 50px;
-      height: 1px;
-      margin: 20px auto 0 0;
-      left: 0;
-      top: 110px;
-
-    }
-  }
-
-  p {
-    font-size: 1.2rem;
-    line-height: 2rem;
-
-    @include tablet {
-      font-size: 1rem;
-    }
-    @include tablet-s {
-      font-size: .9rem;
-      line-height: 1.5rem;
-      text-align: center;
-    }
-  }
-}
 
 .brand-logo {
   background: url("../img/lw-interactive-logo.png") no-repeat;

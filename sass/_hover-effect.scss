@@ -33,7 +33,11 @@ figure.effect-duke p {
 }
 
 figure.effect-duke img {
-  max-width: 100%;
+  max-width: none;
+
+  @include tablet-s {
+    max-width: 100%;
+  }
 }
 figure.effect-duke:hover img {
   opacity: 1;

@@ -266,8 +266,7 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"],
-input[type="reset"],
+html input[type="button"], input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -1424,7 +1423,7 @@ Grid
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
-  unicode-range: U+0020-25CA;
+  unicode-range: U20-25CA;
 }
 
 @font-face {
@@ -1592,6 +1591,94 @@ body:after {
   }
 }
 
+@media (max-width: 850px) {
+  .intro-wrap {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .intro-wrap {
+    height: auto !important;
+    padding-bottom: 50px;
+  }
+}
+
+.intro-main {
+  height: 60vh;
+}
+
+.project-page .intro-main {
+  height: auto;
+  padding-bottom: 1.5em;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+@media (max-width: 1367px) {
+  .intro-main {
+    height: 65vh;
+  }
+}
+
+@media (max-width: 680px) {
+  .intro-main {
+    height: auto;
+  }
+}
+
+.intro-main h1 {
+  position: relative;
+}
+
+@media (max-width: 850px) {
+  .intro-main h1 {
+    font-size: 1.75rem;
+  }
+  .intro-main h1::after {
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .intro-main h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+.intro-main h1::after {
+  background: rgba(0, 0, 0, 0.1);
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 1px;
+  margin: 20px auto 0 0;
+  left: 0;
+  top: 110px;
+}
+
+.intro-main p {
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+@media (max-width: 850px) {
+  .intro-main p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .intro-main p {
+    font-size: .9rem;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+}
+
 .nav-wrapper {
   padding-top: 100px;
 }
@@ -1654,10 +1741,6 @@ main {
   }
 }
 
-.intro-wrap {
-  height: 100vh;
-}
-
 .project-page .intro-wrap {
   height: 40vh;
 }
@@ -1672,88 +1755,6 @@ main {
   color: rgba(0, 0, 0, 0.5);
   margin: 1.5em 0 3em;
   text-align: center;
-}
-
-@media (max-width: 1367px) {
-  .intro-wrap {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-}
-
-@media (max-width: 850px) {
-  .intro-wrap {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-.intro-main {
-  height: 60vh;
-}
-
-.project-page .intro-main {
-  height: auto;
-  padding-bottom: 1.5em;
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-}
-
-@media (max-width: 1367px) {
-  .intro-main {
-    height: 65vh;
-  }
-}
-
-.intro-main h1 {
-  position: relative;
-}
-
-@media (max-width: 850px) {
-  .intro-main h1 {
-    font-size: 1.75rem;
-  }
-  .intro-main h1::after {
-    display: none;
-  }
-}
-
-@media (max-width: 680px) {
-  .intro-main h1 {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-}
-
-.intro-main h1::after {
-  background: rgba(0, 0, 0, 0.1);
-  content: "";
-  position: absolute;
-  width: 50px;
-  height: 1px;
-  margin: 20px auto 0 0;
-  left: 0;
-  top: 110px;
-}
-
-.intro-main p {
-  font-size: 1.2rem;
-  line-height: 2rem;
-}
-
-@media (max-width: 850px) {
-  .intro-main p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 680px) {
-  .intro-main p {
-    font-size: .9rem;
-    line-height: 1.5rem;
-    text-align: center;
-  }
 }
 
 .brand-logo {
@@ -1821,9 +1822,9 @@ main {
   display: block;
   margin: 50px auto 0;
   max-width: 100%;
-  transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -webkit-transition: all .5s ease;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
 }
 
 .project-bg.columns {
@@ -1880,9 +1881,9 @@ button {
   outline: none;
   padding: 10px 20px;
   text-transform: uppercase;
-  transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -webkit-transition: all .5s ease;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
 }
 
 button:active {
@@ -1904,15 +1905,21 @@ figure.effect-duke {
 
 figure.effect-duke img,
 figure.effect-duke p {
-  -webkit-transition: opacity .75s, -webkit-transform .75s;
-  transition: opacity .75s, transform .75s;
-  transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -webkit-transition: all .5s ease;
+  -webkit-transition: opacity 0.75s, -webkit-transform 0.75s;
+  transition: opacity 0.75s, transform 0.75s;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
 }
 
 figure.effect-duke img {
-  max-width: 100%;
+  max-width: none;
+}
+
+@media (max-width: 680px) {
+  figure.effect-duke img {
+    max-width: 100%;
+  }
 }
 
 figure.effect-duke:hover img {
@@ -2014,9 +2021,9 @@ figure.effect-duke p a {
   text-transform: uppercase;
   text-align: center;
   padding: 12px 0;
-  transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -webkit-transition: all .5s ease;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
 }
 
 figure.effect-duke p a:hover {
@@ -2034,9 +2041,9 @@ figure.effect-duke p a:hover {
 }
 
 figure.effect-duke:hover p {
-  transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -webkit-transition: all .5s ease;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
 }
 
 figure.effect-duke:hover p:hover {
