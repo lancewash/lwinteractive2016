@@ -76,6 +76,10 @@ figure.effect-duke h2 {
   //-webkit-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
   //text-align: center;
+
+  @include tablet-s {
+    text-align: center;
+  }
   
   .inverse-bg & {
     //background: rgba(255, 255, 255, .5);
@@ -170,18 +174,26 @@ figure.effect-duke p {
     text-align: center;
     padding: 8px 0;
     @include allTransition;
-    
-    &:hover {
+
+    @include tablet-s {
+      background: rgba(255,255,255,1);
+      border: none;
+      color: rgba(0,0,0,1);
+      padding: 10px 0;
+    }
+
+    &:hover, &:active {
       //border: 1px solid rgba(0,0,0,.75);
       //-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.5),0 5px 10px 0 rgba(0,0,0,.4);
       //-moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,.5),0 5px 10px 0 rgba(0,0,0,.4);
       //box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 5px 10px 0 rgba(0,0,0,.4);
-      background: rgba(0, 0, 0, .5);
+
       border-top: 1px solid rgba(255,255,255,.5);
       border-bottom: 1px solid rgba(255,255,255,.5);
       border-left: 1px solid rgba(255,255,255,.5);
       border-right: 1px solid rgba(255,255,255,.5);
-      color: rgba(255,255,255,1);
+      background: rgba(255,255,255,1);
+      color: rgba(0,0,0,1);
       //padding: 10px 0;
     }
 
@@ -282,6 +294,7 @@ figure.effect-duke:hover p {
     transform: translate3d(0,0,0);
 
     @include tablet-s {
+      margin-left: 0;
       position: absolute;
       top: 154px;
       width: 100%;

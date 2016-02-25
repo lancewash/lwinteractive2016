@@ -9,10 +9,10 @@ body {
   font-family: $font-family-base;
   overflow-x: hidden;
   background: rgba(0,0,0,1);
-  background-image: url("../img/body-bg.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+  //background-image: url("../img/body-bg.png");
+  //background-repeat: no-repeat;
+  //background-attachment: fixed;
+  //background-position: center;
   padding: 0 6px;
 
   &:before, &:after {
@@ -52,7 +52,8 @@ body {
   background: rgba(255,255,255,1);
   overflow: hidden;
   width: 100%;
-  
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
   //#sii & {
   //  background: #2FADD5;
   //}
@@ -95,11 +96,20 @@ body {
   .project-page & {
     //border-bottom: 1px solid rgba(0,0,0,.25);
     height: auto;
-    padding-bottom: 1.5em;
+    padding: 0 0 3em;
     width: 100%;
     max-width: 100%;
     margin: 0;
+    
   }
+  
+  //#sii & {
+  //  background: rgba(47,173,213,1);
+  //
+  //  h1, p {
+  //    color: rgba(255,255,255,1);
+  //  }
+  //}
 
   @include laptop {
     height: 65vh;
@@ -133,6 +143,13 @@ body {
       left: 0;
       top: 110px;
 
+      .project-page & {
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: 60px
+      }
+
     }
   }
 
@@ -165,6 +182,10 @@ body {
 
     &:first-child {
       border-bottom: 1px solid rgba(255,255,255,1);
+
+      @include tablet-s {
+        border-bottom: none;
+      }
     }
   }
 }

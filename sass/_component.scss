@@ -5,6 +5,10 @@ Components
 */
 main {
   border-top: 6px solid rgba(0, 0, 0, 1);
+
+  .project-page & {
+    border-top: none;
+  }
 }
 .canvas-wrap {
   background: rgba(255,255,255,1);
@@ -27,7 +31,7 @@ main {
   }
 
   @include laptop {
-    height: 35vh;
+    height: 30vh;
     padding-top: 50px;
   }
   @include tablet-s {
@@ -40,16 +44,16 @@ main {
   //position: fixed;
 
   .project-page & {
-    height: 40vh;
+    height: auto;
     
     h1 {
       color: rgba(0,0,0,1);
-      margin: 0;
+      margin: 0 0 2em;
       text-align: center;
     }
     p {
       color: rgba(0, 0, 0, .5);
-      margin: 1.5em 0 3em;
+      margin: 1.5em 0;
       text-align: center;
     }
   }
@@ -114,6 +118,10 @@ main {
 .projects {
   border-right: 1px solid rgba(255, 255, 255, 1);
   border-bottom: 1px solid rgba(255, 255, 255, 1);
+
+  @include tablet-s {
+    border-bottom: none;
+  }
 }
 .projects-last {
   //margin-bottom: 1px;
@@ -124,6 +132,10 @@ main {
   //min-height: 400px;
   //max-height: 400px;
   height: 33vh;
+
+  .project-page & {
+    height: auto;
+  }
 
   @include tablet-s {
     height: 215px;
