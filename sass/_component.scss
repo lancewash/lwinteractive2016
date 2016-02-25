@@ -93,6 +93,12 @@ main {
     -ms-filter: grayscale(100%);
     filter: grayscale(100%);
 
+    -webkit-filter: brightness(25%);
+    -moz-filter: brightness(25%);
+    -o-filter: brightness(25%);
+    -ms-filter: brightness(25%);
+    filter: brightness(25%);
+
     // Browser Specific
     //-webkit-filter: blur(8px);
     //-moz-filter: blur(8px);

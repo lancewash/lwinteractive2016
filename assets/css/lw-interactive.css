@@ -1795,6 +1795,11 @@ main {
   -o-filter: grayscale(100%);
   -ms-filter: grayscale(100%);
   filter: grayscale(100%);
+  -webkit-filter: brightness(25%);
+  -moz-filter: brightness(25%);
+  -o-filter: brightness(25%);
+  -ms-filter: brightness(25%);
+  filter: brightness(25%);
 }
 
 .projects {
@@ -1936,24 +1941,15 @@ figure.effect-duke:hover img {
 figure.effect-duke h2 {
   letter-spacing: 4px;
   line-height: 1.25;
-  top: 20px;
+  top: 50px;
   color: white;
-  padding: 10px;
   position: relative;
-  max-width: 620px;
-  margin: 0 auto;
+  margin: 0 4rem;
   position: relative;
-  -webkit-transition: -webkit-transform 0.75s;
-  transition: transform 0.75s;
-  -webkit-transform: scale3d(0.8, 0.8, 1);
-  transform: scale3d(0.8, 0.8, 1);
-  -webkit-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
-  text-align: center;
 }
 
 .inverse-bg figure.effect-duke h2 {
-  background: rgba(255, 255, 255, 0.75);
   color: rgba(0, 0, 0, 0.75);
   min-width: auto;
 }
@@ -1965,17 +1961,6 @@ figure.effect-duke h2 span {
   letter-spacing: 2px;
   display: inline-block;
   text-transform: capitalize;
-}
-
-figure.effect-duke h2::after {
-  background: rgba(255, 255, 255, 0.5);
-  content: "";
-  position: absolute;
-  width: 60px;
-  height: 1px;
-  margin: 60px auto 0;
-  left: 0;
-  right: 0;
 }
 
 .flex figure figcaption > a {
@@ -1993,15 +1978,18 @@ figure.effect-duke h2::after {
   width: 100%;
   height: 100%;
   cursor: default;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
 }
 
 figure.effect-duke p {
-  margin: 0 auto;
+  margin-left: 4rem;
   font-size: 90%;
   opacity: 0;
   position: relative;
   top: 60px;
-  width: 260px;
+  width: 220px;
   -webkit-transition: opacity 0.75s, -webkit-transform 0.75s;
   transition: opacity 0.75s, transform 0.75s;
   -webkit-transform: translate3d(0, -50px, 0);
@@ -2010,27 +1998,31 @@ figure.effect-duke p {
 }
 
 figure.effect-duke p a {
-  background: rgba(255, 255, 255, 0.75);
   display: block;
-  border: 1px solid white;
-  color: black;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0);
+  border-right: 1px solid rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0.75);
   font-family: "montserratlight", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 800;
   letter-spacing: 2px;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-  padding: 12px 0;
+  padding: 8px 0;
   transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
 }
 
 figure.effect-duke p a:hover {
-  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5), 0 5px 10px 0 rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5), 0 5px 10px 0 rgba(0, 0, 0, 0.4);
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 5px 10px 0 rgba(0, 0, 0, 0.4);
-  color: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  color: white;
 }
 
 @media (max-width: 680px) {
@@ -2047,7 +2039,6 @@ figure.effect-duke:hover p {
 }
 
 figure.effect-duke:hover p:hover {
-  background: white;
   color: rgba(0, 0, 0, 0.8);
 }
 
