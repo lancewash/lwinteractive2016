@@ -75,7 +75,7 @@ figure.effect-duke h2 {
   //transform: scale3d(0.8,0.8,1);
   //-webkit-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
-  //text-align: center;
+  text-align: center;
 
   @include tablet-s {
     text-align: center;
@@ -144,13 +144,14 @@ figure.effect-duke h2 {
 }
 figure.effect-duke p {
 
-  margin-left: 4rem;
+  margin: 0 auto;
   //bottom: 300px;
   font-size: 90%;
   opacity: 0;
   position: relative;
   //top: 180px;
-  top: 60px;
+  text-align: center;
+  top: 65px;
   width: 220px;
   -webkit-transition: opacity 0.75s, -webkit-transform 0.75s;
   transition: opacity 0.75s, transform 0.75s;
