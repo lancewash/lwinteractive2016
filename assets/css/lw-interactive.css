@@ -1518,7 +1518,7 @@ Helper Classes
 
 /*
 ======================================
-Block Level
+Components
 ======================================
 */
 body {
@@ -1550,7 +1550,6 @@ body:after {
 }
 
 .canvas-wrap {
-  background: white;
   overflow: hidden;
   width: 100%;
   -webkit-transition: -webkit-transform 0.5s;
@@ -1579,6 +1578,7 @@ body:after {
 }
 
 .intro-wrap {
+  background: white;
   height: 100vh;
 }
 
@@ -1601,6 +1601,14 @@ body:after {
     height: auto !important;
     padding-bottom: 50px;
   }
+}
+
+main {
+  border-top: 6px solid black;
+}
+
+.project-page main {
+  border-top: none;
 }
 
 .intro-main {
@@ -1704,25 +1712,6 @@ body:after {
   .flex .project-bg:first-child {
     border-bottom: none;
   }
-}
-
-/*
-======================================
-Components
-======================================
-*/
-main {
-  border-top: 6px solid black;
-}
-
-.project-page main {
-  border-top: none;
-}
-
-.canvas-wrap {
-  background: white;
-  overflow: hidden;
-  width: 100%;
 }
 
 .row.row-wide {

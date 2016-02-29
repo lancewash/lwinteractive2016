@@ -3,6 +3,97 @@
 Components
 ======================================
 */
+
+
+body {
+  //background: lighten($colorBody, 90%);
+  color: $color-primary;
+  font-family: $font-family-base;
+  overflow-x: hidden;
+  background: rgba(0,0,0,1);
+  //background-image: url("../img/body-bg.png");
+  //background-repeat: no-repeat;
+  //background-attachment: fixed;
+  //background-position: center;
+  padding: 0 6px;
+
+  &:before, &:after {
+    background: rgba(0,0,0,1);
+    content: '';
+    display: block;
+    height: 6px;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+  }
+  &:before {
+    top: 0;
+  }
+  &:after {
+    bottom: 0;
+    z-index: 99999;
+  }
+
+  //&#fabc {
+  //  background: #3c0308;
+  //
+  //  &:before, &:after {
+  //    background: #3c0308;
+  //  }
+  //}
+  //&#sii {
+  //  background: #2FADD5;
+  //
+  //  &:before, &:after {
+  //    background: #2FADD5;
+  //  }
+  //}
+}
+.canvas-wrap {
+  overflow: hidden;
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  //#sii & {
+  //  background: #2FADD5;
+  //}
+}
+
+.row.row-wide {
+  width: 100%;
+  max-width: 1680px;
+}
+.columns {
+  overflow: hidden;
+}
+.header-main {
+  height: 40vh;
+  padding: 100px 0 0;
+
+  @include laptop {
+    height: 35vh;
+    padding-top: 50px;
+  }
+}
+.intro-wrap {
+  background: rgba(255,255,255,1);
+  height: 100vh;
+
+  @include laptop {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  @include tablet {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @include tablet-s {
+    height: auto !important;
+    padding-bottom: 50px;
+  }
+}
+
 main {
   border-top: 6px solid rgba(0, 0, 0, 1);
 
@@ -10,11 +101,115 @@ main {
     border-top: none;
   }
 }
-.canvas-wrap {
-  background: rgba(255,255,255,1);
-  overflow: hidden;
-  width: 100%;
+
+.intro-main {
+  height: 60vh;
+
+  .project-page & {
+    //border-bottom: 1px solid rgba(0,0,0,.25);
+    height: auto;
+    padding: 0 0 3em;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+
+  }
+
+  //#sii & {
+  //  background: rgba(47,173,213,1);
+  //
+  //  h1, p {
+  //    color: rgba(255,255,255,1);
+  //  }
+  //}
+
+  @include laptop {
+    height: 65vh;
+  }
+  @include tablet-s {
+    height: auto;
+  }
+
+  h1 {
+    position: relative;
+
+    @include tablet {
+      font-size: 1.75rem;
+
+      &::after {
+        display: none;
+      }
+    }
+    @include tablet-s {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    &::after {
+      background: rgba(0,0,0,.1);
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 1px;
+      margin: 20px auto 0 0;
+      left: 0;
+      top: 110px;
+
+      .project-page & {
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: 60px
+      }
+
+    }
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+
+    @include tablet {
+      font-size: 1rem;
+    }
+    @include tablet-s {
+      font-size: .9rem;
+      line-height: 1.5rem;
+      text-align: center;
+    }
+  }
 }
+
+
+.nav-wrapper {
+  padding-top: 100px;
+
+  @include laptop {
+    padding-top: 0;
+  }
+}
+
+@include tablet-s {
+  .flex {
+
+    .project-bg {
+
+      &:first-child {
+        border-bottom: 1px solid rgba(255,255,255,1);
+
+        @include tablet-s {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
+
+//.canvas-wrap {
+//  background: rgba(255,255,255,1);
+//  overflow: hidden;
+//  width: 100%;
+//}
 .row.row-wide {
   width: 100%;
   max-width: 1680px;
