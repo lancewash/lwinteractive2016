@@ -21,6 +21,16 @@ figure.effect-duke {
   margin: 0;
   padding: 0;
   width: 100%;
+
+  //&.n2n {
+  //  background: url("../../assets/img/n2n-lg.jpg") 50% 50%;
+  //  height: 100%;
+  //  width: 100%;
+  //
+  //  &:hover {
+  //    background-clip: padding-box;
+  //  }
+  //}
 }
 
 figure.effect-duke img,
@@ -33,7 +43,10 @@ figure.effect-duke p {
 }
 
 figure.effect-duke img {
-  max-width: none;
+  max-width: 100%;
+  //display: block;
+  //margin-left: auto;
+  //margin-right: auto;
 
   @include tablet-s {
     max-width: 100%;
