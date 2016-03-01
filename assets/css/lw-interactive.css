@@ -266,8 +266,7 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"],
-input[type="reset"],
+html input[type="button"], input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -1424,7 +1423,7 @@ Grid
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
-  unicode-range: U+0020-25CA;
+  unicode-range: U20-25CA;
 }
 
 @font-face {
@@ -1579,7 +1578,7 @@ body:after {
 }
 
 .intro-wrap {
-  background: white;
+  background: rgba(255, 255, 255, 0.95);
   height: 100vh;
 }
 
@@ -1842,9 +1841,9 @@ main {
   display: block;
   margin: 5em auto 0;
   max-width: 100%;
-  transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -webkit-transition: all .5s ease;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
 }
 
 .project-bg.columns {
@@ -1900,7 +1899,7 @@ Helper Classes
 ======================================
 */
 button {
-  background: white;
+  background: rgba(255, 255, 255, 0);
   border: 1px solid rgba(255, 255, 255, 0);
   color: #b69853;
   font-family: "montserratbold", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1909,9 +1908,9 @@ button {
   outline: none;
   padding: 10px 20px;
   text-transform: uppercase;
-  transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -webkit-transition: all .5s ease;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
 }
 
 button:active {
@@ -1933,11 +1932,11 @@ figure.effect-duke {
 
 figure.effect-duke img,
 figure.effect-duke p {
-  -webkit-transition: opacity .75s, -webkit-transform .75s;
-  transition: opacity .75s, transform .75s;
-  transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -webkit-transition: all .5s ease;
+  -webkit-transition: opacity 0.75s, -webkit-transform 0.75s;
+  transition: opacity 0.75s, transform 0.75s;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
 }
 
 figure.effect-duke img {
@@ -2008,9 +2007,9 @@ figure.effect-duke h2 span {
   width: 100%;
   height: 100%;
   cursor: default;
-  transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -webkit-transition: all .5s ease;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
 }
 
 figure.effect-duke p {
@@ -2042,9 +2041,9 @@ figure.effect-duke p a {
   text-transform: uppercase;
   text-align: center;
   padding: 8px 0;
-  transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -webkit-transition: all .5s ease;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
 }
 
 @media (max-width: 680px) {
@@ -2073,9 +2072,9 @@ figure.effect-duke p a:hover, figure.effect-duke p a:active {
 }
 
 figure.effect-duke:hover p {
-  transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -webkit-transition: all .5s ease;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
 }
 
 figure.effect-duke:hover p:hover {
