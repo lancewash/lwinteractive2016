@@ -1526,7 +1526,7 @@ body {
   font-family: "merriweatherregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   overflow-x: hidden;
   background: black;
-  padding: 0 6px;
+  padding: 0;
 }
 
 body:before, body:after {
@@ -1554,6 +1554,8 @@ body:after {
   width: 100%;
   -webkit-transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
+  border-right: 6px solid black;
+  border-left: 6px solid black;
 }
 
 .row.row-wide {
