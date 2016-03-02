@@ -274,7 +274,7 @@ main {
   }
 }
 .projects-wrap {
-  border-top: 1px solid rgba(255,255,255,.25);
+  border-top: 1px solid #555;
 
   .overlay & {
     margin-top: 7px;
@@ -313,8 +313,8 @@ main {
   }
 }
 .projects {
-  border-right: 1px solid rgba(255,255,255,.25);
-  border-bottom: 1px solid rgba(255,255,255,.25);
+  border-right: 1px solid #555;
+  border-bottom: 1px solid #555;
 
   @include tablet-s {
     border-bottom: none;
@@ -324,7 +324,7 @@ main {
   //margin-bottom: 1px;
 }
 .project-bg {
-  border-left: 1px solid rgba(255,255,255,.25);
+  border-left: 1px solid #555;
   height: 33vh;
 
   //&.br {
@@ -336,7 +336,7 @@ main {
   }
 
   @include tablet-s {
-    height: 215px;
+    height: 205px;
     position: relative;
   }
   
@@ -409,7 +409,8 @@ main {
 }
 
 footer {
+  border-bottom: 1px solid #555;
   border-left: 1px solid rgba(255,255,255,.25);
   border-right: 1px solid rgba(255,255,255,.25);
-  margin-bottom: 7px;
+  margin-bottom: 6px;
 }

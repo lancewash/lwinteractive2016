@@ -1782,7 +1782,7 @@ main {
 }
 
 .projects-wrap {
-  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid #555;
 }
 
 .overlay .projects-wrap {
@@ -1809,8 +1809,8 @@ main {
 }
 
 .projects {
-  border-right: 1px solid rgba(255, 255, 255, 0.25);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid #555;
+  border-bottom: 1px solid #555;
 }
 
 @media (max-width: 680px) {
@@ -1820,7 +1820,7 @@ main {
 }
 
 .project-bg {
-  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  border-left: 1px solid #555;
   height: 33vh;
 }
 
@@ -1830,7 +1830,7 @@ main {
 
 @media (max-width: 680px) {
   .project-bg {
-    height: 215px;
+    height: 205px;
     position: relative;
   }
 }
@@ -1890,9 +1890,10 @@ main {
 }
 
 footer {
+  border-bottom: 1px solid #555;
   border-left: 1px solid rgba(255, 255, 255, 0.25);
   border-right: 1px solid rgba(255, 255, 255, 0.25);
-  margin-bottom: 7px;
+  margin-bottom: 6px;
 }
 
 /*
