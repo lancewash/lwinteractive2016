@@ -36,7 +36,7 @@ $tablet-s: "(max-width: 680px)";
 
 
 @mixin allTransition {
-  transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -webkit-transition: all .5s ease;
+  transition: all .75s ease-in-out;
+  -moz-transition: all .75s ease-in-out;
+  -webkit-transition: all .75s ease-in-out;
 }
