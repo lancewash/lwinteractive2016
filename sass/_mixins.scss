@@ -1,8 +1,8 @@
 
-$laptop-width: 1367px;
-$tablet-850-width: 850px;
-$tablet-680-width: 680px;
-$tablet-525-width: 525px;
+$laptop-width: 85.4375rem;
+$tablet-850-width: 53.125rem;
+$tablet-680-width: 42.5rem;
+$tablet-525-width: 32.8125rem;
 
 @mixin laptop {
   @media (max-width: #{$laptop-width}) {
