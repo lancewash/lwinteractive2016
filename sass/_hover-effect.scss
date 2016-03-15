@@ -80,7 +80,7 @@ figure.effect-duke h2 {
   //padding: 10px;
   position: relative;
   //max-width: 620px;
-  margin: 0 4rem;
+  margin: 2rem 4rem 0;
   position: relative;
   //-webkit-transition: -webkit-transform 0.75s;
   //transition: transform 0.75s;
@@ -89,6 +89,8 @@ figure.effect-duke h2 {
   //-webkit-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
   text-align: center;
+  @include allTransition;
+  
 
   @include tablet-s {
     text-align: center;
@@ -133,6 +135,16 @@ figure.effect-duke h2 {
   //  right: 0;
   //}
 }
+.effect-duke:hover {
+  //margin-top: 0;
+  @include allTransition;
+  
+  //h2 {
+  //  margin-top: 0;
+  //
+  //  @include allTransition;
+  //}
+}
 
 .flex figure figcaption > a {
   z-index: 1000;
@@ -164,7 +176,7 @@ figure.effect-duke p {
   position: relative;
   //top: 180px;
   text-align: center;
-  top: 65px;
+  top: 0; // was 65px
   width: 220px;
   -webkit-transition: opacity 0.75s, -webkit-transform 0.75s;
   transition: opacity 0.75s, transform 0.75s;
@@ -225,7 +237,10 @@ figure.effect-duke:hover p:hover {
   //background: rgba(255,255,255,1);
   color: rgba(0,0,0,.8);
 }
-figure.effect-duke:hover h2,
+figure.effect-duke:hover h2 {
+  opacity: 0;
+}
+//figure.effect-duke:hover h2,
 figure.effect-duke:hover p {
   opacity: 1;
   //position: relative;

@@ -266,8 +266,7 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"],
-input[type="reset"],
+html input[type="button"], input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -1424,7 +1423,7 @@ Grid
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
-  unicode-range: U+0020-25CA;
+  unicode-range: U20-25CA;
 }
 
 @font-face {
@@ -1585,6 +1584,10 @@ body:after {
   height: 100vh;
 }
 
+.project-page .intro-wrap {
+  background: white;
+}
+
 @media (max-width: 1367px) {
   .intro-wrap {
     padding-left: 4rem;
@@ -1616,10 +1619,10 @@ body:after {
 
 .project-page .intro-main {
   height: auto;
-  padding: 0 0 3em;
+  padding: 4em 0 3em;
   width: 100%;
   max-width: 100%;
-  margin: 0;
+  margin: auto;
 }
 
 @media (max-width: 1367px) {
@@ -1669,7 +1672,7 @@ body:after {
   margin: 0 auto;
   left: 0;
   right: 0;
-  top: 60px;
+  bottom: 100%;
 }
 
 .intro-main p {
@@ -1691,8 +1694,79 @@ body:after {
   }
 }
 
+/*
+---------------------------------
+Project page specific styles
+---------------------------------
+*/
+.project-page h1 span {
+  font-family: "merriweatherregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 100;
+  letter-spacing: 2px;
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+.project-page.sii .intro-main {
+  background: #2FADD5;
+}
+
+.project-page.sii .intro-main h1, .project-page.sii .intro-main p {
+  color: white;
+}
+
+.project-page.sii .intro-main h1:after {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.project-page.n2n .intro-main {
+  background: #7e1315;
+}
+
+.project-page.n2n .intro-main h1, .project-page.n2n .intro-main p {
+  color: white;
+}
+
+.project-page.n2n .intro-main h1:after {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.project-page.gs .intro-main {
+  background: #455a64;
+}
+
+.project-page.gs .intro-main h1, .project-page.gs .intro-main p {
+  color: white;
+}
+
+.project-page.gs .intro-main h1:after {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.project-page.mc .intro-main {
+  background: #323232;
+}
+
+.project-page.mc .intro-main h1, .project-page.mc .intro-main p {
+  color: white;
+}
+
+.project-page.mc .intro-main h1:after {
+  background: rgba(255, 255, 255, 0.5);
+  top: 65px;
+}
+
+.project-page.lw .intro-main {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.project-page.lw .intro-main h1:after {
+  top: 65px;
+}
+
 .nav-wrapper {
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
 @media (max-width: 1367px) {
@@ -1723,12 +1797,13 @@ body:after {
 }
 
 .header-main {
-  height: 40vh;
-  padding: 0;
+  height: 35vh;
+  padding: 50px 0 0 0;
 }
 
 .project-page .header-main {
-  height: 30vh;
+  height: 20vh;
+  height: 220px;
 }
 
 @media (max-width: 1367px) {
@@ -1840,9 +1915,9 @@ body:after {
   display: block;
   margin: 5em auto 0;
   max-width: 100%;
-  transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -webkit-transition: all .5s ease;
+  transition: all 0.75s ease-in-out;
+  -moz-transition: all 0.75s ease-in-out;
+  -webkit-transition: all 0.75s ease-in-out;
 }
 
 .project-bg.columns {
@@ -1890,6 +1965,7 @@ footer {
   border-bottom: 1px solid #555;
   border-left: 1px solid rgba(255, 255, 255, 0.25);
   border-right: 1px solid rgba(255, 255, 255, 0.25);
+  height: 33vh;
   margin-bottom: 12px;
 }
 
@@ -1908,9 +1984,9 @@ button {
   outline: none;
   padding: 10px 20px;
   text-transform: uppercase;
-  transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -webkit-transition: all .5s ease;
+  transition: all 0.75s ease-in-out;
+  -moz-transition: all 0.75s ease-in-out;
+  -webkit-transition: all 0.75s ease-in-out;
 }
 
 button:active {
@@ -1932,11 +2008,11 @@ figure.effect-duke {
 
 figure.effect-duke img,
 figure.effect-duke p {
-  -webkit-transition: opacity .75s, -webkit-transform .75s;
-  transition: opacity .75s, transform .75s;
-  transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -webkit-transition: all .5s ease;
+  -webkit-transition: opacity 0.75s, -webkit-transform 0.75s;
+  transition: opacity 0.75s, transform 0.75s;
+  transition: all 0.75s ease-in-out;
+  -moz-transition: all 0.75s ease-in-out;
+  -webkit-transition: all 0.75s ease-in-out;
 }
 
 figure.effect-duke img {
@@ -1966,10 +2042,13 @@ figure.effect-duke h2 {
   top: 50px;
   color: white;
   position: relative;
-  margin: 0 4rem;
+  margin: 2rem 4rem 0;
   position: relative;
   transform-origin: 50% 50%;
   text-align: center;
+  transition: all 0.75s ease-in-out;
+  -moz-transition: all 0.75s ease-in-out;
+  -webkit-transition: all 0.75s ease-in-out;
 }
 
 @media (max-width: 680px) {
@@ -1992,6 +2071,12 @@ figure.effect-duke h2 span {
   text-transform: capitalize;
 }
 
+.effect-duke:hover {
+  transition: all 0.75s ease-in-out;
+  -moz-transition: all 0.75s ease-in-out;
+  -webkit-transition: all 0.75s ease-in-out;
+}
+
 .flex figure figcaption > a {
   z-index: 1000;
   text-indent: 200%;
@@ -2007,9 +2092,9 @@ figure.effect-duke h2 span {
   width: 100%;
   height: 100%;
   cursor: default;
-  transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -webkit-transition: all .5s ease;
+  transition: all 0.75s ease-in-out;
+  -moz-transition: all 0.75s ease-in-out;
+  -webkit-transition: all 0.75s ease-in-out;
 }
 
 figure.effect-duke p {
@@ -2018,7 +2103,7 @@ figure.effect-duke p {
   opacity: 0;
   position: relative;
   text-align: center;
-  top: 65px;
+  top: 0;
   width: 220px;
   -webkit-transition: opacity 0.75s, -webkit-transform 0.75s;
   transition: opacity 0.75s, transform 0.75s;
@@ -2041,9 +2126,9 @@ figure.effect-duke p a {
   text-transform: uppercase;
   text-align: center;
   padding: 8px 0;
-  transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -webkit-transition: all .5s ease;
+  transition: all 0.75s ease-in-out;
+  -moz-transition: all 0.75s ease-in-out;
+  -webkit-transition: all 0.75s ease-in-out;
 }
 
 @media (max-width: 680px) {
@@ -2072,16 +2157,19 @@ figure.effect-duke p a:hover, figure.effect-duke p a:active {
 }
 
 figure.effect-duke:hover p {
-  transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -webkit-transition: all .5s ease;
+  transition: all 0.75s ease-in-out;
+  -moz-transition: all 0.75s ease-in-out;
+  -webkit-transition: all 0.75s ease-in-out;
 }
 
 figure.effect-duke:hover p:hover {
   color: rgba(0, 0, 0, 0.8);
 }
 
-figure.effect-duke:hover h2,
+figure.effect-duke:hover h2 {
+  opacity: 0;
+}
+
 figure.effect-duke:hover p {
   opacity: 1;
   -webkit-transform: scale3d(1, 1, 1);
